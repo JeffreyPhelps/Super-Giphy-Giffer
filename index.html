@@ -1,0 +1,64 @@
+<!-- Jeffrey Phelps - DU Web Dev Bootcamp 2017/2018 - Week-6 Homework - APIs & AJAX -->
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+    <head>
+        
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <title>Super Giphy Giffer</title>
+      
+      <link rel="stylesheet" href="normalize.css" type="text/css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+
+        <div class="container-fluid" id="container">
+
+            <div class="row" id="buttonsRow">
+
+                <div class="col-xs-12 col-s-12 col-md-12 col-lg-12">
+
+                    <h1>Super Giphy Giffer</h1>
+                    <br>
+                    <!-- Rendered Buttons will get Dumped Here  -->
+                    <div id="buttonsDiv"></div>
+
+                    <form id="topicForm">
+                        <label for="topicInput">Add a Gif Topic!</label>
+                        <input type="text" id="topicInput"><br>
+                        <!-- Button triggers new movie to be added -->
+                        <input id="addTopic" type="submit" value="Add Topic">
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-xs-12 col-s-12 col-md-12 col-lg-12">
+                    <!-- Gifs will get Dumped Here  -->
+                    <div id="gifDiv"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Remote jQuery, javascript file for the Bootstrap's javascript file to function -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Local JavaScript file -->
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

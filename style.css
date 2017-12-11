@@ -1,0 +1,36 @@
+/* Jeffrey Phelps - DU Web Dev Bootcamp 2017/2018 - Week-6 Homework - APIs & AJAX */
+
+
+
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+}
+
+h1 {
+    margin-left: 50px;
+}
+
+#buttonsRow {
+    border-bottom: 5px solid #ffffff;
+}
+
+button, div, form, input {
+  margin: 10px;
+}
+
+button, input {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+
+form {
+    float: right;
+    margin-right: 100px;
+}
+
+.item {
+    float: left;
+    margin: 20px;
+}
+
