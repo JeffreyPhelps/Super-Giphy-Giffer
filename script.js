@@ -3,12 +3,12 @@
 var topics = ["Trending", "Sports", "News", "Television", "Movies"];
 
 // displayMovieInfo function re-renders the HTML to display the appropriate content
-function giffyGiffer() {
+function giphyGiffer() {
 
 	var topic = $(this).attr("data-name");
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=12";
 
-	// Creating an AJAX call for the specific movie button being clicked
+	// Creating an AJAX call for the button being clicked
 	$.ajax({
 		url: queryURL,
 		method: "GET"
@@ -39,7 +39,7 @@ function giffyGiffer() {
 
 	});
 
-}
+};
 
 // Function for displaying gif data
 function renderButtons() {
@@ -65,7 +65,7 @@ function renderButtons() {
 
 };
 
-// This function handles events where a topic button is clicked
+// This function handles events when a topic button is clicked
 $("#addTopic").on("click", function(event) {
 	event.preventDefault();
 	// This line grabs the input from the textbox
@@ -81,3 +81,18 @@ $(document).on("click", ".topic", giffyGiffer);
 
 // Calling the renderButtons function to display the intial buttons
 renderButtons();
+
+// A function to allow gif animation when clicked
+$(".item").on("click", function() {
+	
+	var state = $(this).attr("data-state");
+	
+	if (state === "still") {
+	  $(this).attr("src", $(this).attr("data-animate"));
+	  $(this).attr("data-state", "animate");
+	} else {
+	  $(this).attr("src", $(this).attr("data-still"));
+	  $(this).attr("data-state", "still");
+	};
+
+  });
