@@ -6,14 +6,14 @@ var topics = ["Trending", "Sports", "News", "Television", "Movies"];
 function giffyGiffer() {
 
 	var topic = $(this).attr("data-name");
-	var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&limit=12";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=12";
 
 	// Creating an AJAX call for the specific movie button being clicked
 	$.ajax({
 		url: queryURL,
 		method: "GET"
 	}).done(function(response) {
-
+		$(".item").empty();
 		var results = response.data;
 		
 		// Looping over every result item
