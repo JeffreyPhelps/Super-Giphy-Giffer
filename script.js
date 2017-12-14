@@ -6,7 +6,7 @@ var topics = ["Trending", "Sports", "News", "Television", "Movies"];
 function giphyGiffer() {
 
 	var topic = $(this).attr("data-name");
-	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=12";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=dc6zaTOxFJmzC&limit=16";
 
 	// Creating an AJAX call for the button being clicked
 	$.ajax({
@@ -83,7 +83,7 @@ $(document).on("click", ".topic", giphyGiffer);
 renderButtons();
 
 // A function to allow gif animation when clicked
-$(".item").on("click", function() {
+$("image").on("click", function() {
 	
 	var state = $(this).attr("data-state");
 	
