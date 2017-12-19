@@ -9,6 +9,17 @@ body {
 
 h1 {
     margin-left: 50px;
+    font-weight: bolder;
+}
+
+h3 {
+    margin-left: 65px;
+    color: rgb(75, 75, 75);
+    font-weight: bolder;
+}
+
+h4 {
+    margin-left: 50px;
 }
 
 #buttonsRow {
