@@ -27,8 +27,11 @@ function giphyGiffer() {
 			var p = $("<p>").text("Rating: " + rating);
 			// Creating an image tag
 			var image = $("<img>");
+			image.attr("data-state", "still");
+			image.attr("data-animate", results[i].images.fixed_height.url);
+			image.attr("data-still", results[i].images.fixed_height_still.url);
 			// Giving the image tag an src attribute of a proprty pulled off the result item
-			image.attr("src", results[i].images.fixed_height.url);
+			image.attr("src", results[i].images.fixed_height_still.url);
 			// Appending the paragraph and image we created to the "item" div we created
 			itemDiv.append(p);
 			itemDiv.append(image);
@@ -83,8 +86,7 @@ $(document).on("click", ".topic", giphyGiffer);
 renderButtons();
 
 // A function to allow gif animation when clicked
-$("image").on("click", function() {
-	
+$(document).on("click", "img", function() {
 	var state = $(this).attr("data-state");
 	
 	if (state === "still") {
@@ -95,4 +97,4 @@ $("image").on("click", function() {
 	  $(this).attr("data-state", "still");
 	};
 
-  });
+});
