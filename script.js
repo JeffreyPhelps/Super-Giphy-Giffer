@@ -1,6 +1,9 @@
 // Jeffrey Phelps - DU Web Dev Bootcamp 2017/2018 - Week-6 Homework - APIs & AJAX
 
-var topics = ["Trending", "Sports", "News", "Television", "Movies"];
+var topics = ["Actions", "Adjectives", "Animals", "Anime", "Art & Design", "Cartoons & Comics", 
+"Celebrities", "Decades", "Emotions", "Fashion & Beauty", "Food & Drink", "Gaming", "Holidays", 
+"Interests", "Memes", "Movies", "Music", "Nature", "News & Politics", "Reactions", "Science", 
+"Sports", "Stickers", "Transportation", "TV"];
 
 // displayMovieInfo function re-renders the HTML to display the appropriate content
 function giphyGiffer() {
